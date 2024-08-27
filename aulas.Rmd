@@ -1,0 +1,156 @@
+---
+title: "Introdução à Estatística"
+subtitle: |
+  | Prof. Me. Lineu Alberto Cavazani de Freitas
+author: |
+  |
+  | 2024/02 - Ciências Sociais
+output:
+  html_document:                    
+    #toc: true                       
+    #toc_depth: 3                    
+    #toc_float:                      
+    #  collapsed: true
+    #  smooth_scroll: true
+    #number_sections: true           
+    #theme: default
+    #spacelab
+    #default,cerulean,journal,flatly,readable,spacelab,
+    #united,cosmo,lumen,paper,sandstone,simplex,yeti
+    
+    highlight: espresso
+    #default, tango, pygments, kate, monochrome, espresso, zenburn, haddock, and textmate
+    #css: styles.css                
+    fig_width: 7                    
+    fig_height: 6                   
+    fig_caption: true               
+    fig_align: 'center'
+    #code_folding: hide              
+#    keep_md: true
+---
+
+---
+
+# Aulas do curso
+
+---
+
+## Bloco 1: Análise Exploratória
+
+**Aula 1**
+
+ - [Orientações iniciais e Introdução.](slides/100-introducao.pdf)
+ - [Dados e amostragem.](slides/101-dados-e-amostragem.pdf)
+ - [Atividade prática: tipos de variáveis, tipos de estudos e amostragem]().
+
+**Aula 2**
+
+ - [Gráficos e tabelas para variáveis qualitativas.](slides/102-exploratoria-quali-uni-tabelas-graficos.pdf)
+ - [Gráficos e tabelas para variáveis quantitativas.](slides/103-exploratoria-quant-uni-tabelas-graficos.pdf)
+ - [Atividade prática: gráficos e tabelas]().
+
+**Aula 3**
+
+ - [Resumos numéricos - medidas de posição.](slides/104-exploratoria-medidas-posicao.pdf)
+ - [Resumos numéricos - medidas de dispersão.](slides/105-exploratoria-medidas-dispersao.pdf)
+ - [Atividade prática: medidas de posição e dispersão]().
+
+**Aula 4**
+
+ - [Análises bivariadas.](slides/106-exploratoria-bivariada.pdf)
+ - [Atividade prática: análises bivariadas]().
+ - Resolução de exercícios.
+
+**Aula 5**
+
+ - PROVA 1
+
+---
+
+## Bloco 2: Probabilidades
+
+**Aula 6**
+
+ - [Introdução a probabilidade](slides/200-intro-prob.pdf).
+ - [Operações com probabilidades](slides/201-operacoes-com-probabilidades.pdf).
+ - [Atividade prática: probabilidade](). 
+    
+**Aula 7**
+
+ - [Teorema de Bayes](slides/202-teorema-de-bayes.pdf).
+ - [Atividade prática: Teorema de Bayes]().
+ - Resolução de exercícios.
+ 
+---
+
+## Bloco 3: Variáveis Aleatórias e Distribuições de Probabilidade
+
+**Aula 8**
+
+ - [Variáveis aleatórias discretas e contínuas](slides/300-variaveis-aleatorias.pdf).
+  - [Atividade prática: variáveis aleatórias discretas e contínuas]().
+- Resolução de exercícios.
+
+**Aula 9**
+
+ - [Distribuições de probabilidade discretas](slides/301-distribuicoes-discretas.pdf).
+ - [Distribuições de probabilidade contínuas](slides/302-distribuicoes-continuas.pdf).
+ - Atividade prática: distribuições de probabilidade.
+ - Resolução de exercícios.
+
+**Aula 10**
+
+ - PROVA 2
+
+---
+
+## Bloco 4: Inferência
+
+**Aula 11**
+
+ - [Introdução à inferência](slides/400-intro-inferencia.pdf).
+ - [Atividade prática: introdução à inferência]().
+ - [Estimação pontual e intervalar](slides/401-estimacao-pontual-intervalar.pdf).
+ - [Atividade prática: estimação pontual e intervalar]().
+    
+**Aula 12**
+
+ - [Tamanho amostral](slides/402-tamanho-amostral.pdf).
+ - [Atividade prática: tamanho amostral]()
+ - Resolução de exercícios.
+
+**Aula 13**
+
+ - [Introdução aos testes de hipóteses, testes para uma população](slides/403-testes-de-hipoteses.pdf).
+ - [Atividade prática: testes de hipóteses]().
+
+**Aula 14**
+ - 
+ 
+**Aula 15**
+ - Prova 3
+
+**Exame**
+
+ - 19/12/24.
+
+---
+
+<center>
+
+<table><tr>
+
+<td> <img src="img/ufpr-transparent-600px.png" alt="Drawing" style="width: 200px;"/> </td>
+
+<td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+
+<td> <img src="img/dest-texto-2.png" alt="Drawing" style="width: 250px;"/> </td>
+
+<td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+
+<td> <img src="img/leg.png" alt="Drawing" style="width: 300px;"/> </td>
+
+</center>
+
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
