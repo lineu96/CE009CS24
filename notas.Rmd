@@ -184,13 +184,13 @@ ggplot(data = subset(presencas, datas <= lubridate::today()),
   geom_line() +
   geom_point() +
   geom_smooth() +
-  geom_hline(yintercept = 71,
+  geom_hline(yintercept = 80,
              lwd = 1.5,
              col = 2,
              lty = 2) +
   ylab("Nº de presentes") +
   xlab("Data") +
-  ylim(c(0,71))+
+  ylim(c(0,81))+
   ggtitle("Série de presenças")+
   theme_classic() + 
   theme(legend.position = 'none',
