@@ -184,7 +184,7 @@ ggplot(data = subset(presencas, datas <= lubridate::today()),
   geom_line() +
   geom_point() +
   geom_smooth() +
-  geom_hline(yintercept = 80,
+  geom_hline(yintercept = 81,
              lwd = 1.5,
              col = 2,
              lty = 2) +
