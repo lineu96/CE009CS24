@@ -41,13 +41,13 @@ output:
 
  - [Orientações iniciais e Introdução.](slides/100-introducao.pdf)
  - [Dados e amostragem.](slides/101-dados-e-amostragem.pdf)
- - [Atividade prática: tipos de variáveis, tipos de estudos e amostragem]().
+ - [Atividade prática: tipos de variáveis, tipos de estudos e amostragem](praticas-aula/100-variaveis-estudos-amostragem-solucao.pdf).
 
 **Aula 2**
 
  - [Gráficos e tabelas para variáveis qualitativas.](slides/102-exploratoria-quali-uni-tabelas-graficos.pdf)
  - [Gráficos e tabelas para variáveis quantitativas.](slides/103-exploratoria-quant-uni-tabelas-graficos.pdf)
- - [Atividade prática: gráficos e tabelas]().
+ - [Atividade prática: gráficos e tabelas](praticas-aula/101-tabelas-graficos-quali-quant-solucao.pdf).
 
 **Aula 3**
 

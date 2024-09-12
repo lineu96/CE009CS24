@@ -154,17 +154,21 @@ DT::datatable(notas[,c('GRR',
 
 ```
 
+---
+
+# Presenças
+
 <center>
 ```{r, echo=FALSE, warning=FALSE}
 
-datas1 <- stringr::str_remove(names(notas)[15:(length(names(notas))-5)],
+datas1 <- stringr::str_remove(names(notas)[13:(length(names(notas))-5)],
                               "'")
 
 datas2 <- stringr::str_remove(datas1, c("'"))
 
 datas <- lubridate::dmy(datas2)
 
-presencas <- colSums(is.na(notas[,15:(length(names(notas))-5)]))
+presencas <- colSums(is.na(notas[,13:(length(names(notas))-5)]))
 
 presencas <- data.frame(datas = datas,
                         presencas = presencas)
