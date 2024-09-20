@@ -53,7 +53,7 @@ output:
 
  - [Resumos numéricos - medidas de posição.](slides/104-exploratoria-medidas-posicao.pdf)
  - [Resumos numéricos - medidas de dispersão.](slides/105-exploratoria-medidas-dispersao.pdf)
- - [Atividade prática: medidas de posição e dispersão]().
+ - [Atividade prática: medidas de posição e dispersão](praticas-aula/102-medidas-posicao-dispersao-solucao.pdf).
 
 **Aula 4**
 
