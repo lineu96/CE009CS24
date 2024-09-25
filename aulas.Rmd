@@ -58,8 +58,8 @@ output:
 **Aula 4**
 
  - [Análises bivariadas.](slides/106-exploratoria-bivariada.pdf)
- - [Atividade prática: análises bivariadas]().
- - Resolução de exercícios.
+ - [Atividade prática: análises bivariadas](praticas-aula/103-analises-bivariadas-solucao.pdf).
+ - [Resolução de exercícios](atividade-pre-prova.pdf).
 
 **Aula 5**
 

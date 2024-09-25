@@ -1,0 +1,278 @@
+---
+title: "Introdução à Estatística"
+author: 
+ - "Prof. Lineu Alberto Cavazani de Freitas" 
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = F)
+```
+
+\vspace{1cm}
+
+Considere o conjunto de dados que representa uma amostra de alunos de primeiro ano de uma turma de graduação. As variáveis coletadas foram: grau de escolaridade (ensino médio, ensino superior, mestrado, doutorado), origem, número de irmãos e tempo que o indivíduo leva para chegar à universidade em minutos. Os dados da amostra estão descritos na tabela.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, eval=TRUE}
+dados <- read.csv2("estbas.csv", header = T, sep = ',')
+set.seed(2)
+dados <- dados[sample(1:nrow(dados), 10),c(2,20,19,22)]
+dados[3,4] <- 150
+row.names(dados) <- NULL
+names(dados) <- c("Escolaridade", "Origem", "Irmãos", "Tempo até universidade")
+knitr::kable(dados)
+```
+
+Com base nos dados, responda as questões. 
+
+\vspace{-0.2cm}
+
+Nas respostas use pelo menos 2 casas decimais. 
+
+\vspace{-0.2cm}
+
+Nos gráficos atente-se para a legenda e escalas.
+
+---
+
+1) Quais são os tipos das variáveis coletadas? Classifique-as em qualitativa nominal, qualitativa ordinal, quantitativa discreta ou quantitativa contínua. 
+
+```{r, echo=FALSE}
+
+knitr::kable(t(data.frame("Escolaridade" = "Qualitativa ordinal",
+           "Origem" = "Qualitativa nominal",
+           "Irmãos" = "Quantitativa discreta",
+           "Tempo" = "Quantitativa contínua")))
+
+```
+
+2) Considere que para gerar a amostra existia um cadastro de alunos. Decidiu-se por selecionar 1 a cada 50 alunos deste cadastro. Para isso, sorteou-se um número aleatório entre 1 e 50 para decidir a unidade de partida, para as demais unidades incrementou-se o número da unidade de partida de 50 em 50 até que o tamanho da amostra desejada fosse atingido. Qual o nome deste método de amostragem? Este plano de amostragem corresponde a um método probabilístico ou não probabilístico? 
+
+```{r, echo=FALSE}
+
+knitr::kable(t(data.frame("Amostragem sistemática" = "Método probabilístico")))
+
+```
+
+3) Monte uma tabela de frequências para a variável origem. Use frequências absolutas e relativas. Qual é a classe modal? 
+
+```{r, echo=FALSE}
+tabela <- as.data.frame(table(dados$Origem))
+tabela$Freq_r <- prop.table(table(dados$Origem))
+names(tabela) <- c("Origem", "Frequência", "Frequência relativa")
+knitr::kable(tabela)
+
+```
+
+```{r, echo=FALSE}
+knitr::kable(t(data.frame(R = "Curitiba é a classe modal, ou seja, a maior parte dos indivíduos vieream de Curitiba.")))
+
+```
+
+4) Monte uma tabela de frequências para a variável tempo até a universidade. Use faixas de tamanho 20, partindo de 0 até 160. Qual é a faixa modal?  
+
+```{r, echo=FALSE}
+
+breaks <- hist(dados$`Tempo até universidade`, plot = F)$breaks
+
+faixas <- cut(dados$`Tempo até universidade`,
+              breaks = breaks,
+              include.lowest = T,
+              right = F)
+
+tabela <- as.data.frame(table(faixas))
+tabela$Freq_r <- prop.table(table(faixas))
+names(tabela) <- c("Tempo", "Frequência", "Frequência relativa")
+knitr::kable(tabela)
+
+```
+
+```{r, echo=FALSE}
+knitr::kable(t(data.frame(R = "[20, 40) é a faixa modal.")))
+```
+
+5) Obtenha média, mediana, desvio padrão para as variáveis número de irmãos e tempo até a universidade. 
+
+```{r, echo=FALSE}
+Irmaos <- c(mean(dados$Irmãos), var(dados$Irmãos), sd(dados$Irmãos))
+names(Irmaos) <- c("Média", "Variância", "Desvio padrão")
+df <- as.data.frame(Irmaos)
+df$Tempo <- c(mean(dados$`Tempo até universidade`), var(dados$`Tempo até universidade`), sd(dados$`Tempo até universidade`))
+knitr::kable(t(round(df, 2)))
+```
+
+6) Considere o indivíduo da terceira linha da tabela. Qual o valor do Z-escore para número de irmãos e tempo até a universidade deste indivíduo? Interprete o resultado. 
+
+```{r, echo=FALSE}
+df <- data.frame(Z = c(round((dados[3,3] - mean(dados$Irmãos))/sd(dados$Irmãos), 2),
+  round((dados[3,4] - mean(dados$`Tempo até universidade`))/sd(dados$`Tempo até universidade`), 2))
+)
+
+rownames(df) <- c("Irmãos", "Tempo")
+knitr::kable(df)
+```
+
+```{r, echo=FALSE}
+knitr::kable(t(data.frame(R = "O indivíduo está mais de 2 desvios padrões distante da média para ambas as variáveis.")))
+```
+
+7) Número de irmãos e tempo até a universidade são variáveis em diferentes escalas, qual delas apresenta maior variabilidade? Utiliza uma medida de comparação adequada.
+
+8) Com base na tabela do item (4), esboce o histograma da variável pesos. O que você conclui a respeito da simetria?  
+
+```{r,echo=FALSE, fig.align='center'}
+
+freq <- tabela$Frequência
+names(freq) <- tabela$Tempo
+barplot(freq, 
+        space = 0, 
+        xlab = "Tempo", 
+        ylab = "Frequência", 
+        main = "", 
+        col = 0)
+
+```
+
+8) Obtenha as quantidades necessárias e esboce o box-plot da variável número de irmãos. Coloque nos eixos os valores utilizados para o esboço. O que você conclui a respeito da simetria e da presença de valores atípicos?  
+
+```{r,echo=FALSE, fig.height=4, fig.align='center'}
+
+aiq = fivenum(dados$Irmãos)[4] - fivenum(dados$Irmãos)[2]
+bp <- c(NA,fivenum(dados$Irmãos)[2:4],NA)
+bp[1] <- bp[2] - (1.5*aiq)
+bp[5] <- bp[4] + (1.5*aiq)
+names(bp) <- c("Q1 - 1.5AIQ", 
+               "Q1", "Q2", "Q3",
+               "Q3 + 1.5AIQ")
+
+
+tabela <- c(min(dados$Irmãos), bp, max(dados$Irmãos))
+names(tabela)[1] <- "Mínimo"
+names(tabela)[7] <- "Máximo"
+knitr::kable(t(tabela))
+
+boxplot(dados$Irmãos, xaxt = "n", col = 0, horizontal=T)
+
+axis(1, 
+     at=tabela[c(1, 3,4,5,7)],
+     labels = T)
+```
+
+```{r, echo=FALSE}
+knitr::kable(t(data.frame(R = "A variável é razoavelmete simétrica mas apresenta um valor atípico.")))
+```
+
+9) Esboce a representação gráfica adequada que permita avaliar a relação entre as variáveis número de irmãos e tempo até a universidade. O que você conclui? 
+
+```{r,echo=FALSE}
+plot(dados$Irmãos, dados$`Tempo até universidade`,
+     xlab = 'Irmãos', ylab = 'Tempo', pch = 19)
+```
+
+10) Avalie os gráficos abaixo. O que você conclui?  
+
+\vspace{-1.5cm}
+
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', eval = T, fig.height=4.5}
+dados2 <- subset(dados, Origem %in% c('Curitiba', 'Outro Estado'))
+
+par(mfrow = c(1,2))
+boxplot(Irmãos~Origem, 
+        ylab = "Irmãos", xlab = "Origem", col = 0,
+        data = dados2
+        )
+
+y <- prop.table(
+  table(
+    dados2$Escolaridade, dados2$Origem), 
+  margin=2)
+
+barplot(
+  y,
+  xlim=c(0, ncol(y) + 3),
+  legend.text=TRUE,
+  args.legend=list(
+    x=ncol(y) + 3,
+    y=max(colSums(y)),
+    bty = "n"
+  )
+)
+```
+
+```{r, echo=FALSE}
+knitr::kable(t(data.frame(R1 = "Aparentemente indivíduos de Curitiba tem mais irmãos que indivíduos de outros estados.",
+                          R2 = "A proporção de indivíduos de outro estado com mestrado é superior à proporção de indivíduos com mestrado de Curitiba.")))
+```
+
+12) Obtenha uma medida de associação entre número de irmãos e tempo. O que você conlui? 
+
+```{r, echo=FALSE, warning=FALSE}
+cor = cor(dados$Irmãos, dados$`Tempo até universidade`)
+resp <- data.frame("Correlação"= round(cor,  2))
+names(resp) <- 'Correlação = '
+knitr::kable(t(resp))
+
+```
+
+```{r, echo=FALSE}
+knitr::kable(t(data.frame(R = "O valor calculado é maior que 0, indicando relação linear crescente entre as variáveis, assim como o diagrama de dispersão da questão 9.")))
+```
+
+13) Obtenha uma tabela de dupla entrada e uma medida de associação entre escolaridade e origem. O que você conlui? 
+
+---
+
+\begin{table}[h]
+\begin{tabular}{ccc}
+
+$\overline{y} = \dfrac{\sum_{i = 1}^{n} y_i}{n}$
+&
+$\overline{y} = \dfrac{\sum_{i = 1}^{k} f_i \cdot y_i}{\sum_{i = 1}^{k} f_i}$
+&
+$A = max(y) - min(y)$
+
+\\
+&
+&
+\\
+
+$DAM_{média} = \frac{1}{n} \sum_{i = 1}^n |(y_i - \overline{y})|$
+&
+&
+$DAM_{mediana} = \frac{1}{n} \sum_{i = 1}^n |(y_i - md)|$
+
+\\
+&
+\\
+
+\multicolumn{2}{l}{$s^2 = \textrm{Var}(y) = \frac{1}{n - 1} \sum_{i = 1}^{n} (y_i - \overline{y})^2 = \frac{1}{n - 1}\left(\sum_{i = 1}^{n} y_i^2 - \frac{(\sum_{i = 1}^{n} y_i)^2}{n}\right)$}
+
+&
+
+$s = \sqrt{s^2}$
+
+\\
+&
+&
+\\
+
+\hspace{-4cm}
+$\textrm{CV} = 100 \cdot \frac{s}{\overline{y}}$
+&
+\hspace{-3cm}
+$z = \frac{y_i - \bar{y}}{s}$ \hspace{1cm} $H = -\sum_{i=1}^{S}{f_r \times ln(f_r)}$
+&
+\hspace{1cm}
+$Q = \sum_{i=1}^{r} \sum_{j=1}^{s} \frac{(o_{ij} - e_{ij})^2}{e_{ij}}$
+
+\\
+&
+&
+\\
+
+$\textrm{Cov}(y_1, y_2) = \frac{1}{n - 1} \displaystyle\sum_{i = 1}^{n} (y_{1i} - \overline{y}_1)\cdot (y_{2i} - \overline{y}_2)$ & \multicolumn{2}{l}{$\hspace{1cm} r = \frac{\sum_{i = 1}^{n} (y_{1i} - \overline{y}_1)\cdot (y_{2i} - \overline{y}_2)}{\sqrt{\sum_{i = 1}^{n} (y_{1i} - \overline{y}_1)^2}\cdot \sqrt{\sum_{i = 1}^{n} (y_{2i} - \overline{y}_2)^2}} = \frac{\textrm{Cov}(y_1, y_2)}{ \sqrt{\textrm{V}(y_1)\cdot \textrm{V}(y_2)}}$}
+
+\end{tabular}
+\end{table}
+
+---

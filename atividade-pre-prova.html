@@ -9,6 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Prof. Lineu Alberto Cavazani de Freitas" />
 
 
 <title>Introdução à Estatística</title>
@@ -30,6 +31,8 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -42,6 +45,16 @@
   ul.task-list{list-style: none;}
     </style>
 
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
 
 
 
@@ -385,167 +398,226 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Introdução à Estatística</h1>
-<h3 class="subtitle"><div class="line-block">Prof. Me. Lineu Alberto
-Cavazani de Freitas</div></h3>
-<h4 class="author"><div class="line-block"><br />
-2024/02 - Ciências Sociais</div></h4>
+<h4 class="author">Prof. Lineu Alberto Cavazani de Freitas</h4>
 
 </div>
 
 
-<hr />
-<div id="aulas-do-curso" class="section level1">
-<h1>Aulas do curso</h1>
-<hr />
-<div id="bloco-1-análise-exploratória" class="section level2">
-<h2>Bloco 1: Análise Exploratória</h2>
-<p><strong>Aula 1</strong></p>
-<ul>
-<li><a href="slides/100-introducao.pdf">Orientações iniciais e
-Introdução.</a></li>
-<li><a href="slides/101-dados-e-amostragem.pdf">Dados e
-amostragem.</a></li>
-<li><a
-href="praticas-aula/100-variaveis-estudos-amostragem-solucao.pdf">Atividade
-prática: tipos de variáveis, tipos de estudos e amostragem</a>.</li>
-</ul>
-<p><strong>Aula 2</strong></p>
-<ul>
-<li><a
-href="slides/102-exploratoria-quali-uni-tabelas-graficos.pdf">Gráficos e
-tabelas para variáveis qualitativas.</a></li>
-<li><a
-href="slides/103-exploratoria-quant-uni-tabelas-graficos.pdf">Gráficos e
-tabelas para variáveis quantitativas.</a></li>
-<li><a
-href="praticas-aula/101-tabelas-graficos-quali-quant-solucao.pdf">Atividade
-prática: gráficos e tabelas</a>.</li>
-</ul>
-<p><strong>Aula 3</strong></p>
-<ul>
-<li><a href="slides/104-exploratoria-medidas-posicao.pdf">Resumos
-numéricos - medidas de posição.</a></li>
-<li><a href="slides/105-exploratoria-medidas-dispersao.pdf">Resumos
-numéricos - medidas de dispersão.</a></li>
-<li><a
-href="praticas-aula/102-medidas-posicao-dispersao-solucao.pdf">Atividade
-prática: medidas de posição e dispersão</a>.</li>
-</ul>
-<p><strong>Aula 4</strong></p>
-<ul>
-<li><a href="slides/106-exploratoria-bivariada.pdf">Análises
-bivariadas.</a></li>
-<li><a
-href="praticas-aula/103-analises-bivariadas-solucao.pdf">Atividade
-prática: análises bivariadas</a>.</li>
-<li><a href="atividade-pre-prova.pdf">Resolução de exercícios</a>.</li>
-</ul>
-<p><strong>Aula 5</strong></p>
-<ul>
-<li>PROVA 1</li>
-</ul>
-<hr />
-</div>
-<div id="bloco-2-probabilidades" class="section level2">
-<h2>Bloco 2: Probabilidades</h2>
-<p><strong>Aula 6</strong></p>
-<ul>
-<li><a href="slides/200-intro-prob.pdf">Introdução a
-probabilidade</a>.</li>
-<li><a href="slides/201-operacoes-com-probabilidades.pdf">Operações com
-probabilidades</a>.</li>
-<li><a href="">Atividade prática: probabilidade</a>.</li>
-</ul>
-<p><strong>Aula 7</strong></p>
-<ul>
-<li><a href="slides/202-teorema-de-bayes.pdf">Teorema de Bayes</a>.</li>
-<li><a href="">Atividade prática: Teorema de Bayes</a>.</li>
-<li>Resolução de exercícios.</li>
-</ul>
-<hr />
-</div>
-<div id="bloco-3-variáveis-aleatórias-e-distribuições-de-probabilidade"
-class="section level2">
-<h2>Bloco 3: Variáveis Aleatórias e Distribuições de Probabilidade</h2>
-<p><strong>Aula 8</strong></p>
-<ul>
-<li><a href="slides/300-variaveis-aleatorias.pdf">Variáveis aleatórias
-discretas e contínuas</a>.</li>
-<li><a href="">Atividade prática: variáveis aleatórias discretas e
-contínuas</a>.</li>
-<li>Resolução de exercícios.</li>
-</ul>
-<p><strong>Aula 9</strong></p>
-<ul>
-<li><a href="slides/301-distribuicoes-discretas.pdf">Distribuições de
-probabilidade discretas</a>.</li>
-<li><a href="slides/302-distribuicoes-continuas.pdf">Distribuições de
-probabilidade contínuas</a>.</li>
-<li>Atividade prática: distribuições de probabilidade.</li>
-<li>Resolução de exercícios.</li>
-</ul>
-<p><strong>Aula 10</strong></p>
-<ul>
-<li>PROVA 2</li>
-</ul>
-<hr />
-</div>
-<div id="bloco-4-inferência" class="section level2">
-<h2>Bloco 4: Inferência</h2>
-<p><strong>Aula 11</strong></p>
-<ul>
-<li><a href="slides/400-intro-inferencia.pdf">Introdução à
-inferência</a>.</li>
-<li><a href="">Atividade prática: introdução à inferência</a>.</li>
-<li><a href="slides/401-estimacao-pontual-intervalar.pdf">Estimação
-pontual e intervalar</a>.</li>
-<li><a href="">Atividade prática: estimação pontual e
-intervalar</a>.</li>
-</ul>
-<p><strong>Aula 12</strong></p>
-<ul>
-<li><a href="slides/402-tamanho-amostral.pdf">Tamanho amostral</a>.</li>
-<li><a href="">Atividade prática: tamanho amostral</a></li>
-<li>Resolução de exercícios.</li>
-</ul>
-<p><strong>Aula 13</strong></p>
-<ul>
-<li><a href="slides/403-testes-de-hipoteses.pdf">Introdução aos testes
-de hipóteses, testes para uma população</a>.</li>
-<li><a href="">Atividade prática: testes de hipóteses</a>.</li>
-</ul>
-<p><strong>Aula 14</strong> -</p>
-<p><strong>Aula 15</strong> - Prova 3</p>
-<p><strong>Exame</strong></p>
-<ul>
-<li>19/12/24.</li>
-</ul>
-<hr />
-<center>
+<p>Considere o conjunto de dados que representa uma amostra de alunos de
+primeiro ano de uma turma de graduação. As variáveis coletadas foram:
+grau de escolaridade (ensino médio, ensino superior, mestrado,
+doutorado), origem, número de irmãos e tempo que o indivíduo leva para
+chegar à universidade em minutos. Os dados da amostra estão descritos na
+tabela.</p>
 <table>
+<thead>
 <tr>
-<td>
-<img src="img/ufpr-transparent-600px.png" alt="Drawing" style="width: 200px;"/>
+<th style="text-align:left;">
+Escolaridade
+</th>
+<th style="text-align:left;">
+Origem
+</th>
+<th style="text-align:right;">
+Irmãos
+</th>
+<th style="text-align:right;">
+Tempo até universidade
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Ensino superior
 </td>
-<td>
-           
+<td style="text-align:left;">
+Curitiba
 </td>
-<td>
-<img src="img/dest-texto-2.png" alt="Drawing" style="width: 250px;"/>
+<td style="text-align:right;">
+2
 </td>
-<td>
-           
+<td style="text-align:right;">
+30
 </td>
-<td>
-<img src="img/leg.png" alt="Drawing" style="width: 300px;"/>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ensino médio
 </td>
-</center>
-<div class="tocify-extend-page" data-unique="tocify-extend-page"
-style="height: 0;">
-
-</div>
-</div>
-</div>
+<td style="text-align:left;">
+Região metropolitana
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+110
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ensino médio
+</td>
+<td style="text-align:left;">
+Curitiba
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+150
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mestrado
+</td>
+<td style="text-align:left;">
+Curitiba
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ensino superior
+</td>
+<td style="text-align:left;">
+Curitiba
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ensino médio
+</td>
+<td style="text-align:left;">
+Curitiba
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+30
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ensino superior
+</td>
+<td style="text-align:left;">
+Outro Estado
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ensino superior
+</td>
+<td style="text-align:left;">
+Interior do Paraná
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ensino médio
+</td>
+<td style="text-align:left;">
+Outro Estado
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mestrado
+</td>
+<td style="text-align:left;">
+Outro Estado
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+30
+</td>
+</tr>
+</tbody>
+</table>
+<p>Com base nos dados, responda as questões.</p>
+<p>Nas respostas use pelo menos 2 casas decimais.</p>
+<p>Nos gráficos atente-se para a legenda e escalas.</p>
+<hr />
+<ol style="list-style-type: decimal">
+<li><p>Quais são os tipos das variáveis coletadas? Classifique-as em
+qualitativa nominal, qualitativa ordinal, quantitativa discreta ou
+quantitativa contínua.</p></li>
+<li><p>Considere que para gerar a amostra existia um cadastro de alunos.
+Decidiu-se por selecionar 1 a cada 50 alunos deste cadastro. Para isso,
+sorteou-se um número aleatório entre 1 e 50 para decidir a unidade de
+partida, para as demais unidades incrementou-se o número da unidade de
+partida de 50 em 50 até que o tamanho da amostra desejada fosse
+atingido. Qual o nome deste método de amostragem? Este plano de
+amostragem corresponde a um método probabilístico ou não
+probabilístico?</p></li>
+<li><p>Monte uma tabela de frequências para a variável origem. Use
+frequências absolutas e relativas. Qual é a classe modal?</p></li>
+<li><p>Monte uma tabela de frequências para a variável tempo até a
+universidade. Use faixas de tamanho 20, partindo de 0 até 160. Qual é a
+faixa modal?</p></li>
+<li><p>Obtenha média, mediana, desvio padrão para as variáveis número de
+irmãos e tempo até a universidade.</p></li>
+<li><p>Considere o indivíduo da terceira linha da tabela. Qual o valor
+do Z-escore para número de irmãos e tempo até a universidade deste
+indivíduo? Interprete o resultado.</p></li>
+<li><p>Número de irmãos e tempo até a universidade são variáveis em
+diferentes escalas, qual delas apresenta maior variabilidade? Utiliza
+uma medida de comparação adequada.</p></li>
+<li><p>Com base na tabela do item (4), esboce o histograma da variável
+pesos. O que você conclui a respeito da simetria?</p></li>
+<li><p>Obtenha as quantidades necessárias e esboce o box-plot da
+variável número de irmãos. Coloque nos eixos os valores utilizados para
+o esboço. O que você conclui a respeito da simetria e da presença de
+valores atípicos?</p></li>
+<li><p>Esboce a representação gráfica adequada que permita avaliar a
+relação entre as variáveis número de irmãos e tempo até a universidade.
+O que você conclui?</p></li>
+<li><p>Avalie os gráficos abaixo. O que você conclui?</p></li>
+</ol>
+<p><img src="atividade-pre-prova_files/figure-html/unnamed-chunk-15-1.png" width="960" style="display: block; margin: auto;" /></p>
+<ol start="12" style="list-style-type: decimal">
+<li><p>Obtenha uma medida de associação entre número de irmãos e tempo.
+O que você conlui?</p></li>
+<li><p>Obtenha uma tabela de dupla entrada e uma medida de associação
+entre escolaridade e origem. O que você conlui?</p></li>
+</ol>
+<hr />
+<hr />
 
 
 
