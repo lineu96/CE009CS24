@@ -73,7 +73,7 @@ output:
 
  - [Introdução a probabilidade](slides/200-intro-prob.pdf).
  - [Operações com probabilidades](slides/201-operacoes-com-probabilidades.pdf).
- - [Atividade prática: probabilidade](). 
+ - [Atividade prática: probabilidade](praticas-aula/200-probabilidade-solucao.pdf). 
     
 **Aula 7**
 
