@@ -73,12 +73,11 @@ output:
 
  - [Introdução a probabilidade](slides/200-intro-prob.pdf).
  - [Operações com probabilidades](slides/201-operacoes-com-probabilidades.pdf).
- - [Atividade prática: probabilidade](praticas-aula/200-probabilidade-solucao.pdf). 
     
 **Aula 7**
 
  - [Teorema de Bayes](slides/202-teorema-de-bayes.pdf).
- - [Atividade prática: Teorema de Bayes]().
+ - [Atividade prática: probabilidade](praticas-aula/200-probabilidade-solucao.pdf). 
  - Resolução de exercícios.
  
 ---
