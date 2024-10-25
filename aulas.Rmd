@@ -87,7 +87,7 @@ output:
 **Aula 8**
 
  - [Variáveis aleatórias discretas e contínuas](slides/300-variaveis-aleatorias.pdf).
-  - [Atividade prática: variáveis aleatórias discretas e contínuas]().
+  - [Atividade prática: variáveis aleatórias discretas e contínuas](praticas-aula/300-variaveis-aleatorias-solucao.pdf).
 - Resolução de exercícios.
 
 **Aula 9**
