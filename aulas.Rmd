@@ -94,7 +94,6 @@ output:
 
  - [Distribuições de probabilidade discretas](slides/301-distribuicoes-discretas.pdf).
  - [Distribuições de probabilidade contínuas](slides/302-distribuicoes-continuas.pdf).
- - Atividade prática: distribuições de probabilidade.
  - Resolução de exercícios.
 
 **Aula 10**
