@@ -46,6 +46,10 @@ navbar:
         - text: "Testes de hipóteses"
           icon: fa-arrow-right
           href: listas/302-exercicios-testes-de-hipoteses.pdf
+
+        - text: "Revisão Inferência"
+          icon: fa-arrow-right
+          href: revisao-inferencia.pdf
           
     - text: "Tabelas e formulários"
       icon: fa-table
