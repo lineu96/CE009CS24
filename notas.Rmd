@@ -128,20 +128,21 @@ notas$`SITUAÇÃO FINAL` <-
          "APROVADO",
          "REPROVADO")
 
-DT::datatable(notas[,c('GRR', 
+DT::datatable(notas[,c(#'NOME',
+                       'GRR', 
                        'FALTAS', 
                        'PROVA 1', 
                        'PROVA 2',
-                       #'PROVA 3',
+                       'PROVA 3',
                        #'PROVA 4',
                        'REMOTA 1', 
                        'REMOTA 2',
                        'REMOTA 3',
-                       'REMOTA 4'#,
+                       'REMOTA 4',
                        #'TRABALHO 1',
                        #'TRABALHO 2',
-                       #"NOTAS PRÉ EXAME",
-                       #"SITUAÇÃO PRÉ EXAME"
+                       "NOTAS PRÉ EXAME",
+                       "SITUAÇÃO PRÉ EXAME"
                        #"EXAME",
                        #"NOTAS FINAIS",
                        #"SITUAÇÃO FINAL"
