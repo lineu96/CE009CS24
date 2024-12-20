@@ -141,11 +141,11 @@ DT::datatable(notas[,c(#'NOME',
                        'REMOTA 4',
                        #'TRABALHO 1',
                        #'TRABALHO 2',
-                       "NOTAS PRÉ EXAME",
-                       "SITUAÇÃO PRÉ EXAME"
-                       #"EXAME",
-                       #"NOTAS FINAIS",
-                       #"SITUAÇÃO FINAL"
+                       #"NOTAS PRÉ EXAME",
+                       #"SITUAÇÃO PRÉ EXAME"
+                       "EXAME",
+                       "NOTAS FINAIS",
+                       "SITUAÇÃO FINAL"
                        )], 
               class = 'cell-border stripe',
               rownames = F,
